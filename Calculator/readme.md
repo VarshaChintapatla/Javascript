@@ -34,13 +34,6 @@ JavaScript
 
 ---
 
-## 💫 Live Demo
-
-**Try the Calculator here:**<br><br>
-
-[![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-green?style=for-the-badge)](#)
-
----
 
 ## ⚙️ Key Features
 
