@@ -1,10 +1,10 @@
-# 📝 To-Do App
+# 🛒 Shopping Cart
 
-⚡ **To-Do App** is a simple and interactive task management application built using **HTML5, CSS3, and JavaScript**.
+⚡ **Shopping Cart** is a simple and interactive shopping application built using **HTML5, CSS3, and JavaScript**.
 
-It allows users to add, view, edit, complete, and delete tasks. Tasks are stored in the browser using `localStorage`, so they remain available even after refreshing the page.
+It allows users to browse products, add items to the cart, increase or decrease quantities, remove products, and calculate the total price dynamically.
 
-This project demonstrates JavaScript fundamentals such as **CRUD operations, arrays, objects, DOM manipulation, event handling, functions, and localStorage**.
+This project demonstrates JavaScript fundamentals such as **CRUD operations, arrays, objects, array methods, DOM manipulation, event handling, functions, and event delegation**.
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
@@ -19,20 +19,20 @@ This project demonstrates JavaScript fundamentals such as **CRUD operations, arr
 - HTML5
 - CSS3
 - JavaScript
-- Browser LocalStorage
 
 ---
 
 ## ⚙️ Key Features
 
-- ➕ Add new tasks
-- 📋 Display all tasks
-- ✏️ Edit existing tasks
-- ✅ Mark tasks as completed
-- 🗑️ Delete tasks
-- 💾 Save tasks using `localStorage`
-- 🔄 Restore tasks after refreshing the page
-- 🎨 Simple and interactive user interface
+- 🛍️ Display products with names, icons, and prices
+- ➕ Add products to the shopping cart
+- 🔢 Increase or decrease product quantities
+- ✏️ Update quantities dynamically
+- 🗑️ Remove individual products from the cart
+- 🧹 Clear all items from the cart
+- 💰 Calculate the total price automatically
+- ✅ Display a demo checkout confirmation
+- 🎨 Simple and responsive user interface
 
 ---
 
@@ -40,20 +40,23 @@ This project demonstrates JavaScript fundamentals such as **CRUD operations, arr
 
 - CRUD Operations (Create, Read, Update, Delete)
 - Arrays and Objects
-- Array Methods: `push()`, `forEach()`, and `splice()`
+- Array Methods: `map()`, `filter()`, `reduce()`, `find()`, and `push()`
 - DOM Manipulation
 - Event Handling using `addEventListener()`
-- Functions
+- Event Delegation
+- Functions and Arrow Functions
 - Conditional Statements
-- Browser `localStorage`
-- JSON Methods: `JSON.stringify()` and `JSON.parse()`
+- Template Literals
+- Spread Syntax (`...`)
+- Dynamic HTML Rendering
+- Number Formatting using `toLocaleString()`
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-To-Do-App/
+Shopping Cart/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -66,18 +69,23 @@ To-Do-App/
 
 ```mermaid
 flowchart TD
-    A[Open To-Do App] --> B[Load Saved Tasks]
-    B --> C[Display Tasks]
-    C --> D{Choose an Action}
-    D -- Add --> E[Create Task]
-    D -- Edit --> F[Update Task]
-    D -- Complete --> G[Mark Task Completed]
-    D -- Delete --> H[Remove Task]
-    E --> I[Save to LocalStorage]
-    F --> I
-    G --> I
-    H --> I
-    I --> C
+    A[Open Shopping Cart] --> B[Display Products]
+    B --> C{Choose an Action}
+    C -- Add Product --> D[Find Product using find]
+    D --> E{Product Already Exists?}
+    E -- Yes --> F[Update Quantity using map]
+    E -- No --> G[Add New Item]
+    F --> H[Update Cart]
+    G --> H
+    C -- Remove Product --> I[Remove using filter]
+    C -- Change Quantity --> J[Update Item Quantity]
+    C -- Clear Cart --> K[Remove All Items]
+    H --> L[Calculate Total using reduce]
+    I --> L
+    J --> L
+    K --> L
+    L --> M[Display Updated Cart]
+    M --> C
 ```
 
 ---
@@ -87,23 +95,26 @@ flowchart TD
 1. Clone the repository:
 
    ```bash
-   git clone <your-github-repository-url>
+   git clone https://github.com/VarshaChintapatla/Javascript.git
    ```
 
-2. Open the project folder in VS Code.
-3. Make sure `index.html`, `style.css`, and `script.js` are in the same folder.
-4. Open `index.html` in your browser or use VS Code Live Server.
+2. Open the repository in VS Code.
+3. Navigate to the `Shopping Cart` folder.
+4. Make sure `index.html`, `style.css`, and `script.js` are in the same folder.
+5. Open `index.html` in your browser or use the VS Code Live Server extension.
 
 ---
 
 ## 🔮 Future Improvements
 
-- Add task categories and priorities.
-- Add due dates and reminders.
-- Add filters for all, completed, and pending tasks.
-- Add a search feature.
-- Add a dark mode.
-- Improve the user interface for mobile devices.
+- Save cart items using `localStorage`.
+- Add product search and category filters.
+- Display actual product images.
+- Add a wishlist feature.
+- Implement user authentication.
+- Integrate a backend and database to manage products and orders.
+- Add a checkout page with delivery address details.
+- Integrate a payment gateway for real transactions.
 
 ---
 
